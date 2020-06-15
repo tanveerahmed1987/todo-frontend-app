@@ -1,0 +1,44 @@
+/* Style the header */
+
+.header {
+  background-color: #555;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+.inputControl {
+  display: flex;
+}
+
+.inputControl input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+
+.inputControl .addBtn {
+  padding: 0px;
+  margin-top: 5px;
+  width: 15%;
+  height: 50px;
+  background: #940808;
+  color: rgb(255, 250, 250);
+  text-align: center;
+  font-size: 16px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  outline: none;
+  border: none;
+}
+
+.inputControl .addBtn:hover {
+  background-color: #bbb;
+}

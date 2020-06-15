@@ -1,18 +1,43 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import './Navbar.css';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import styles from "./Navbar.module.css";
 
 function Navbar() {
-    return (
-        <ul className="topnav">
-            <li><NavLink to="/" exact activeClassName="active">Home</NavLink></li>
-            <li><NavLink to="/about" activeClassName="active">About</NavLink></li>
-            <li><NavLink to="/news" activeClassName="active">News</NavLink></li>
-            <li><NavLink to="/contact" activeClassName="active">Contact</NavLink></li>
-            <li className="right"><NavLink to="/login" activeClassName="active">Login</NavLink></li>
-            <li className="right"><NavLink to="/register" activeClassName="active">Register</NavLink></li>
-        </ul>
-    )
+  console.log(styles);
+  return (
+    <ul className={styles.topnav}>
+      <li>
+        <NavLink to="/" exact activeClassName={styles.active}>
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/about" activeClassName={styles.active}>
+          About
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/news" activeClassName={styles.active}>
+          News
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/contact" activeClassName={styles.active}>
+          Contact
+        </NavLink>
+      </li>
+      <li className="right">
+        <NavLink to="/login" activeClassName={styles.active}>
+          Login
+        </NavLink>
+      </li>
+      <li className="right">
+        <NavLink to="/register" activeClassName={styles.active}>
+          Register
+        </NavLink>
+      </li>
+    </ul>
+  );
 }
 
 export default Navbar;
