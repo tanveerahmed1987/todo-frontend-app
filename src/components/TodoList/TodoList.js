@@ -25,15 +25,15 @@ function Todo({ item, index, completeTodo, deleteTodo }) {
 }
 
 function TodoList(props) {
-  console.log("TodoList Rendering...");
+  console.log("TodoList Rendering...", styles);
   return (
-    <ul>
+    <ul className={styles.todos}>
       {props.todos && props.todos.length > 0 ? (
         props.todos.map((item, index) => {
           return <Todo key={item.id} item={item} index={index} {...props} />;
         })
       ) : (
-        <li> Todos will appear here after adding. </li>
+        <li className={styles.empty}> Todos will appear here after adding. </li>
       )}
     </ul>
   );

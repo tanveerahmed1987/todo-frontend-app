@@ -1,15 +1,13 @@
-import React from 'react';
-import { Navbar } from './components/Navbar';
-import { Routes } from './routes';
+import React from "react";
+import { NavigationBar } from "./components/NavigationBar";
+import { Routes } from "./routes";
 
-
-
-import './App.css';
+import "./App.scss";
 
 function App() {
   return (
     <div className="app-container">
-      <Navbar />
+      <NavigationBar />
       <Routes />
     </div>
   );
