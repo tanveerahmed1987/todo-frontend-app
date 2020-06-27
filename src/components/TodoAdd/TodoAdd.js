@@ -1,8 +1,11 @@
-import React, { useState } from "react";
-import styles from "./TodoAdd.module.css";
+import React, { useState, useContext } from "react";
+import ThemeContext from "../../context/ThemeContext";
+import "./TodoAdd.scss";
 
 function TodoAdd({ addTodo }) {
   const [todo, setTodo] = useState("");
+  const theme = useContext(ThemeContext);
+  console.log("Theme", theme);
 
   const updateTodo = (e) => {
     setTodo(e.target.value);
@@ -17,16 +20,22 @@ function TodoAdd({ addTodo }) {
   };
 
   return (
-    <div className={styles.header}>
-      <h2>My To Do List</h2>
-      <div className={styles.inputControl}>
+    <div className="todoAddContainer">
+      <h2 className={theme === "primary" ? "primaryColor" : "secondaryColor"}>
+        My To Do List
+      </h2>
+      <div>
         <input
           type="text"
           placeholder="Title..."
           value={todo}
           onChange={updateTodo}
         />
-        <button type="submit" className={styles.addBtn} onClick={todoAdd}>
+        <button
+          type="submit"
+          onClick={todoAdd}
+          className={theme === "primary" ? "primaryColor" : "secondaryColor"}
+        >
           Add
         </button>
       </div>

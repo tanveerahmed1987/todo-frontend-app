@@ -1,0 +1,45 @@
+.navigationBar {
+  font-size: 18px;
+  background-color: rgb(59, 59, 59);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0;
+  height: 70px;
+  align-items: center;
+
+  a {
+    display: inline-block;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-top: 0;
+    text-decoration: none;
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    li {
+      text-align: center;
+      margin: 0;
+
+      a {
+        padding: 20px;
+        &:hover {
+          background-color: rgb(41, 41, 41);
+        }
+      }
+      .active {
+        background-color: rgb(41, 41, 41);
+      }
+    }
+  }
+}

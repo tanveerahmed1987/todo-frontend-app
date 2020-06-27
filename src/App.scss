@@ -1,4 +1,15 @@
+$PRIMARY_COLOR: #10a503;
+$SECONDARY_COLOR: #caa608;
+
 .app-container {
   display: flex;
   flex-direction: column;
+}
+
+.primaryColor {
+  color: $PRIMARY_COLOR;
+}
+
+.secondaryColor {
+  color: $SECONDARY_COLOR;
 }

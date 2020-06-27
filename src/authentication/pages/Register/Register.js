@@ -40,7 +40,7 @@ function Register() {
   return (
     <div>
       <div className="container">
-        <h1>Register</h1>
+        <h2>Register</h2>
         <p>Please fill in this form to create an account.</p>
         <hr />
         <label htmlFor="username">
